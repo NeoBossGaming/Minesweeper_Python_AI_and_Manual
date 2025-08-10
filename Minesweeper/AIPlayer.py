@@ -483,9 +483,10 @@ def randomizer(board,controller):
                     if board[i[1]][i[0]] == " ":
                         possibleLocations.append((i[0], i[1]))
 
-    luckyChoice = random.choice(possibleLocations)
     if len(luckyChoice) == 0:
         return None
+    luckyChoice = random.choice(possibleLocations)
+
     location = {
         "Action": 1,
         "XLoc": luckyChoice[0],
@@ -519,3 +520,4 @@ def makeChoice(board, controller):
     randomizerFunction = randomizer(board,controller)
     if randomizerFunction is not None:
         return randomizerFunction
+
