@@ -483,7 +483,7 @@ def randomizer(board,controller):
                     if board[i[1]][i[0]] == " ":
                         possibleLocations.append((i[0], i[1]))
 
-    if len(luckyChoice) == 0:
+    if len(possibleLocations) == 0:
         return None
     luckyChoice = random.choice(possibleLocations)
 
